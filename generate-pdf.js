@@ -18,7 +18,7 @@ expressProcess.on('close', (code) => {
 });
 
 // Wait for the Express application to start (adjust the delay as needed)
-setTimeout(generatePDF, 5000);
+setTimeout(generatePDF, 60);
 
 async function generatePDF() {
   const browser = await puppeteer.launch();

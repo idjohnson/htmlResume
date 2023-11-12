@@ -5,16 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Tahoma', sans-serif;
-      margin: 10;
-      padding: 10;
+      min-height: 100%;  
+      background: #eee;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: #222;
+      font-size: 14px;
+      line-height: 26px;
+      padding-bottom: 50px;
     }
 
     .resume-container {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      max-width: 700px;   
+      background: #fff;
+      margin: 0px auto 0px; 
+      box-shadow: 1px 1px 2px #DAD7D7;
+      border-radius: 3px;  
+      padding: 40px;
+      margin-top: 50px;
     }
 
     .contact-section {
@@ -46,36 +63,184 @@
     h1, h2, p, li {
       font-family: 'Tahoma', sans-serif;
     }
+    
+.container {
+  max-width: 700px;   
+  background: #fff;
+  margin: 0px auto 0px; 
+  box-shadow: 1px 1px 2px #DAD7D7;
+  border-radius: 3px;  
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.header {
+  margin-bottom: 30px;
+  
+  .full-name {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .first-name {
+    font-weight: 700;
+  }
+  
+  .last-name {
+    font-weight: 300;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .email ,
+  .phone {
+    color: #999;
+    font-weight: 300;
+  } 
+  
+  .separator {
+    height: 10px;
+    display: inline-block;
+    border-left: 2px solid #999;
+    margin: 0px 10px;
+  }
+  
+  .position {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: underline;
+  }
+}
+
+
+.details {
+  line-height: 20px;
+  
+  .section {
+    margin-bottom: 40px;  
+  }
+  
+  .section:last-of-type {
+    margin-bottom: 0px;  
+  }
+  
+  .section__title {
+    letter-spacing: 2px;
+    color: #54AFE4;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section__list-item {
+    margin-bottom: 40px;
+  }
+  
+  .section__list-item:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .left ,
+  .right {
+    vertical-align: top;
+    display: inline-block;
+  }
+  
+  .left {
+    width: 60%;    
+  }
+  
+  .right {
+    tex-align: right;
+    width: 39%;    
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  .skills {
+    
+  }
+    
+  .skills__item {
+    margin-bottom: 10px;  
+  }
+  
+  .skills__item .right {
+    input {
+      display: none;
+    }
+    
+    label {
+      display: inline-block;  
+      width: 20px;
+      height: 20px;
+      background: #C3DEF3;
+      border-radius: 20px;
+      margin-right: 3px;
+    }
+    
+    input:checked + label {
+      background: #79A9CE;
+    }
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="resume-container">
     <div class="contact-section">
-      <p><h1><strong><%= names.name %></strong></h1></p>
-      
-      <% contacts.reverse().forEach((contact) => { %>
-        <% if (contact.enabled === 'true') { %>
-          <p style="text-align: right;"><%= contact.value %>  <%- contact.icon %></p>
-        <% } %>
-      <% }); %>
+      <div class="header">
+        <div class="full-name"> <span class="first-name"><%= names.first %></span> <span class="last-name"><%= names.last %></span></div>
+        <div class="contact-info">
+        <% contacts.reverse().forEach((contact) => { %>
+          <% if (contact.enabled === 'true') { %>
+            <p style="text-align: right;"><span class="email"><%= contact.value %>  <%- contact.icon %></span></p>
+          <% } %>
+        <% }); %>
+        </div
     </div>
 
+    <div class="details">
     <div class="experience-section">
       <div class="experience-list">
-        <h2>Experience</h2>
-        <ul>
+        <div class="section__title">Experience</div>
+          <div class="section__list">
           <% experiences.reverse().forEach((experience) => { %>
             <% if (experience.enabled === 'true') { %>
+                <div class="section__list-item">
+                  <ul>
             <li>
               <strong><%= experience.year %></strong>
               <p><%= experience.title %> at <%= experience.company %></p>
               <p><%= experience.description %></p>
             </li>
+          </ul>
+          </div>
             <% } %>
           <% }); %>
-        </ul>
-        <hr/>
-        <h2>Education</h2>
+        </div>
+        
+      </br></br>
+
+        <div class="section__title">Education</div>
         <ul>
           <% educations.reverse().forEach((education) => { %>
             <% if (education.enabled === 'true') { %>
@@ -89,7 +254,7 @@
       </div>
 
       <div class="extras-list">
-        <h2>Extras</h2>
+        <div class="section__title">Extras</div>
         <ul>
           <% extras.reverse().forEach((extra) => { %>
             <% if (extra.enabled === 'true') { %>
@@ -102,7 +267,8 @@
         </ul>
       </div>
     </div>
-    
+  </div>
+    <br/>
     <div class="footer">
       <p style="text-align: right; font-size: small;">Date Generated: <%= new Date().toLocaleDateString() %> :: Version: <%= version %></p>
     </div>
