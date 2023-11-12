@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 10;
+      padding: 10;
+    }
+
+    .resume-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .contact-section {
+      width: 100%;
+      text-align: left;
+    }
+
+    .experience-section {
+      display: flex;
+      width: 100%;
+    }
+
+    .experience-list {
+      flex: 3;
+      width: 75%;
+      margin-right: 20px;
+    }
+
+    .extras-list {
+      flex: 1;
+      width: 25%;
+    }
+
+    .footer {
+      flex: 1;
+      width: 100%;
+    }
+
+    h1, h2, p, li {
+      font-family: 'Tahoma', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <div class="contact-section">
+      <p><h1><strong><%= names.name %></strong></h1></p>
+      
+      <% contacts.reverse().forEach((contact) => { %>
+        <% if (contact.enabled === 'true') { %>
+          <p style="text-align: right;"><%= contact.value %>  <%- contact.icon %></p>
+        <% } %>
+      <% }); %>
+    </div>
+
+    <div class="experience-section">
+      <div class="experience-list">
+        <h2>Experience</h2>
+        <ul>
+          <% experiences.reverse().forEach((experience) => { %>
+            <% if (experience.enabled === 'true') { %>
+            <li>
+              <strong><%= experience.year %></strong>
+              <p><%= experience.title %> at <%= experience.company %></p>
+              <p><%= experience.description %></p>
+            </li>
+            <% } %>
+          <% }); %>
+        </ul>
+        <hr/>
+        <h2>Education</h2>
+        <ul>
+          <% educations.reverse().forEach((education) => { %>
+            <% if (education.enabled === 'true') { %>
+            <li>
+              <i><%= education.year %>:</i> - <strong><%= education.institution %></strong> - <%= education.location %>
+              <p><%= education.degreeorcert %>: <%= education.status %></p>
+            </li>
+            <% } %>
+          <% }); %>
+        </ul>
+      </div>
+
+      <div class="extras-list">
+        <h2>Extras</h2>
+        <ul>
+          <% extras.reverse().forEach((extra) => { %>
+            <% if (extra.enabled === 'true') { %>
+            <li>
+              <strong><%= extra.date %></strong>
+              <p><%= extra.keyword %>: <%= extra.description %></p>
+            </li>
+            <% } %>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p style="text-align: right; font-size: small;">Date Generated: <%= new Date().toLocaleDateString() %> :: Version: <%= version %></p>
+    </div>
+  </div>
+</body>
+</html>
