@@ -1,7 +1,7 @@
 {
-    "name": "email",
-    "enabled": "false",
-    "tag": "onlyprivate",
-    "value": "isaac@freshbrewed.science",
-    "icon": "&#128231;"
+  "name": "email",
+  "enabled": "false",
+  "tag": "onlyprivate",
+  "value": "isaac@freshbrewed.science",
+  "icon": "&#128231;"
 }

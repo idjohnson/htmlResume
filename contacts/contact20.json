@@ -1,7 +1,7 @@
 {
-    "name": "postal",
-    "enabled": "true",
-    "tag": "onlypublic",
-    "value": "Woodbury MN, 55125",
-    "icon": "&#128232;"
+  "name": "postal",
+  "enabled": "true",
+  "tag": "onlypublic",
+  "value": "Woodbury MN, 55125",
+  "icon": "&#128232;"
 }
