@@ -20,8 +20,8 @@ jobs:
       - name: Create dir
         run: |
           #!/bin/bash
-          apt update
-          apt install -y pandoc
+          sudo apt update
+          sudo apt install -y pandoc
           mkdir ./output || true
       - run: npm run generatepdf
         timeout-minutes: 5
