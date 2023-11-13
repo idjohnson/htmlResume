@@ -1,0 +1,28 @@
+name: GitHub Action For Resume
+on:
+    push:
+      branches:
+        - main
+        - isaacreal
+    pull_request:
+
+jobs:
+  HostedActions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install
+      - name: Create dir
+        run: |
+          #!/bin/bash
+          mkdir ./output || true
+      - run: npm run generatepdf
+        timeout-minutes: 5
+      - name: Generate Docx
+        run: |
+          ./getDocx.sh

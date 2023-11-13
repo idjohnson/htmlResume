@@ -263,18 +263,15 @@
         <div class="section__title">Skills</div>
           <% skills.reverse().forEach((skill) => { %>
             <% if (skill.enabled === 'true') { %>
-              <ul><%= skill.title %>
+              <ul><strong><u><%= skill.title %></u></strong>
             <li>
               <p><%- skill.description %></p>
             </li>
-          </ul>
+          </ul><br/>
             <% } %>
           <% }); %>
-      </div>
-    </div>
-
-      <div class="extras-list">
-        <div class="section__title">Extras</div>
+        <br/>
+        <div class="section__title">Certifications</div>
         <ul>
           <% extras.reverse().forEach((extra) => { %>
             <% if (extra.enabled === 'true') { %>
