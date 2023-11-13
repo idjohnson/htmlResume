@@ -1,6 +1,6 @@
 {
   "name": "email",
-  "enabled": "true",
+  "enabled": "false",
   "tag": "onlypublic",
   "value": "isaac.johnson@gmail.com",
   "icon": "&#128231;"

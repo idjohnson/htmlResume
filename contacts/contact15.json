@@ -1,6 +1,6 @@
 {
   "name": "email",
-  "enabled": "false",
+  "enabled": "true",
   "tag": "onlyprivate",
   "value": "isaac@freshbrewed.science",
   "icon": "&#128231;"

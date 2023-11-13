@@ -1,0 +1,8 @@
+{
+    "year": "Jun 2018 - Sep 2019",
+    "enabled": "true",
+    "title": "Cloud Solutions Architect and Delivery Manager",
+    "company": "Ahead",
+    "location": "Chicago, IL",
+    "description": "Brought in as Cloud Solutions Architect with DevOps and AWS Experience to focus on Azure DevOps and Azure microservices implementation at Medtronic.<ul class='experience-subsection'><li>For first year focused on Medtronic CareLink future release including setting up Azure DevOps, TFS Migration, Kubernetes implementation and Terraform IaC support.  Additionally, during this duration sought and got Azure Cloud (70-535) and Hashi Vault Intermediate certifications. </li><li>From May 2019 on, also served as Delivery Manager focusing on delivering automation solutions to Midwest region which included resource planning, contract write ups (SOW, WBS), and workshops. <ul class='experience-subsection'><li>This included an AKS Foundation implementation at Medline with AAD RBAC </li><li>and a similar AKS and DevOps workshop with the University of Minnesota Center for Farm Finance Management.</li><li>I’ve also lead an Azure Inno Days at Microsoft campus in the Twin Cities and been at the center of devops calls and scoping discussions with many other potential customers ranging from automotive to beauty supply companies.</li></ul></li></ul>"
+}

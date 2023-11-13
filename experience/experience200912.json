@@ -1,0 +1,8 @@
+{
+    "year": "Dec 2009 - Apr 2011",
+    "enabled": "true",
+    "title": "Software Configuration Management",
+    "company": "PatientSafeSolutions",
+    "location": "San Diego, CA",
+    "description": "Build and Release (migrate from Bamboo to Hudson/MVN/Ant). Migration of MySQL/Ubuntu to Postgres/CentOS, P2V. Builds and Releases: Automated iOS builds w/ simulator and dev provisioning. Enterprise distribution, OTA deployments. JIRA, Support Sales with Demo setup."
+}

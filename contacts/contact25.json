@@ -1,6 +1,6 @@
 {
   "name": "postal",
-  "enabled": "false",
+  "enabled": "true",
   "tag": "onlyprivate",
   "value": "Schooner Court, Woodbury MN, 55125",
   "icon": "&#x2709;"

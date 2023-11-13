@@ -1,0 +1,8 @@
+{
+    "year": "Aug 2017 - Jun 2018",
+    "enabled": "true",
+    "title": "CICD Lead - Cloud Center of Excellence",
+    "company": "ThomsonReuters",
+    "location": "Eagan, MN",
+    "description": "Manage 4 directs with CICD Focus utilizing AWS. Tightly connected to CO (Continuous Ops) team. 50/50 on Technical Leadership/Coding and People leadership (reviews, feedback, guidance).<br/>Accomplishments: <ul class='experience-subsection'><li>Lead team through Agile Dojo (first in COE) to develop cloud-centric full app deployment (e.g AWS Codepipeline/ALBs).</li><li>Implement Gitflow. </li><li>First lead/manager in COE to get AWS Certified (AWS Solutions Arch Associate).. </li></ul>Cloud Center of Excellence is a 30+ group focused on helping TR migrate existing infrastructure to the cloud by way of training, templates, POCs, AWS (and some Azure) expertise."
+}

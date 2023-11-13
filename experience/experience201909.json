@@ -1,0 +1,8 @@
+{
+    "year": "Sep 2019 - Jul 2021",
+    "enabled": "true",
+    "title": "Principal Software Engineer (Azure DevOps)",
+    "company": "Medtronic",
+    "location": "Mounds View, MN",
+    "description": "Support Azure DevOps for all Carelink R2 (Cloud) activities with a focus on “right side” containerization, deployment, secrets propagation, builds for .NET and Java, user support. Assist Architecture team on a variety of projects (Metrics, Dashboards). Work with other CRHF teams in their projects (Reports and Metrics for Security, Sonarqube for OneApp, builds for Rhythm). As team reduced to effectively one, sole supporter for all builds/build setup for CL R2 while liaised in with MLife Infrastructure team to support Infrastructure both on-prem and in the clouds (AWS, Azure)."
+}

@@ -63,6 +63,11 @@
     h1, h2, p, li {
       font-family: 'Tahoma', sans-serif;
     }
+
+    .experience-subsection {
+      list-style-type:square; 
+      padding-left: 40px;
+    }
     
 .container {
   max-width: 700px;   
@@ -229,8 +234,8 @@
                   <ul>
             <li>
               <strong><%= experience.year %></strong>
-              <p><%= experience.title %> at <%= experience.company %></p>
-              <p><%= experience.description %></p>
+              <p><span class="name"><%= experience.title %></span> at <span class="name"><%= experience.company %></span> - <i><%= experience.location %></i></p>
+              <p><%- experience.description %></p>
             </li>
           </ul>
           </div>
@@ -241,17 +246,32 @@
       </br></br>
 
         <div class="section__title">Education</div>
-        <ul>
           <% educations.reverse().forEach((education) => { %>
             <% if (education.enabled === 'true') { %>
+              <ul>
             <li>
               <i><%= education.year %>:</i> - <strong><%= education.institution %></strong> - <%= education.location %>
               <p><%= education.degreeorcert %>: <%= education.status %></p>
             </li>
+          </ul>
+          <br/>
             <% } %>
           <% }); %>
-        </ul>
       </div>
+
+      <div class="extras-list">
+        <div class="section__title">Skills</div>
+          <% skills.reverse().forEach((skill) => { %>
+            <% if (skill.enabled === 'true') { %>
+              <ul><%= skill.title %>
+            <li>
+              <p><%- skill.description %></p>
+            </li>
+          </ul>
+            <% } %>
+          <% }); %>
+      </div>
+    </div>
 
       <div class="extras-list">
         <div class="section__title">Extras</div>

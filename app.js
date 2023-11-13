@@ -61,6 +61,19 @@ app.get('/resume', (req, res) => {
     return JSON.parse(data);
   });
 
+  // Path to the folder containing skills JSON files
+  const skillsPath = path.join(__dirname, 'skills');
+
+  // Read all skill JSON files from the folder
+  const skillsFiles = fs.readdirSync(skillsPath);
+
+  // Parse each skills JSON file and store the data in an array
+  const skills = skillsFiles.map((file) => {
+    const filePath = path.join(skillsPath, file);
+    const data = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(data);
+  });
+
 
   // Read name details from name.json
   const namesPath = path.join(__dirname, 'name.json');
@@ -73,7 +86,7 @@ app.get('/resume', (req, res) => {
   const version = fs.readFileSync(versionPath, 'utf-8').trim();
 
   // Render the resume page with the experiences, extras, contact details, and version
-  res.render('resume', { experiences, extras, educations, names, contacts, version });
+  res.render('resume', { experiences, extras, educations, names, skills, contacts, version });
 });
 
 

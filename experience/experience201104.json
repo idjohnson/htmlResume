@@ -1,0 +1,8 @@
+{
+    "year": "Apr 2011 - Mar 2014",
+    "enabled": "true",
+    "title": "Staff SE (SCM)",
+    "company": "Novatel Wireless (now Inseego)",
+    "location": "San Diego, CA",
+    "description": "MiFi Builds and Releases - All Product Lines [P4/SVN].  Supported entirely JIRA / Ticketing System migration (All). Managed Hosted Atlassian, AWS (CloudFront/S3) [backend for MiFi Updates]"
+}
