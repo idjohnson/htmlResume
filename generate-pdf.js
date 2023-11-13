@@ -1,8 +1,10 @@
 const puppeteer = require('puppeteer');
 const { exec } = require('child_process');
 const path = require('path');
+const terminate = require('terminate')
 
 // Start the Express application
+
 const expressProcess = exec('node app.js');
 
 expressProcess.stdout.on('data', (data) => {
@@ -41,8 +43,10 @@ async function generatePDF() {
   await browser.close();
 
   // Close the Express application after generating the PDF
-  expressProcess.kill();
-}
+  //expressProcess.kill();
+  //expressProcess.kill('SIGINT');  
+  terminate(expressProcess.pid, err => console.log("here"))
 
+}
 
 generatePDF();
