@@ -25,4 +25,5 @@ jobs:
         timeout-minutes: 5
       - name: Generate Docx
         run: |
-          ./getDocx.sh
+          ./genDocx.sh
+        timeout-minutes: 5
