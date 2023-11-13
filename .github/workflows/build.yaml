@@ -29,3 +29,11 @@ jobs:
         run: |
           ./genDocx.sh
         timeout-minutes: 5
+      - uses: actions/upload-artifact@v3
+        with:
+          name: resumeDocx
+          path: resume.docx
+      - uses: actions/upload-artifact@v3
+        with:
+          name: resumePDF
+          path: output/resume.pdf
