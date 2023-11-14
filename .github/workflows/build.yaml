@@ -48,6 +48,8 @@ jobs:
         run: |
           set -x
           cd $GITHUB_WORKSPACE/idjohnson
+          git config --global user.email "isaac.johnson@example.com"
+          git config --global user.name "Isaac Johnson"
           cp ../resume.docx ./
           cp ../output/resume.pdf ./
           git add resume.docx
