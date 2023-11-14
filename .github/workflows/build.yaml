@@ -20,6 +20,7 @@ jobs:
       - name: Create dir
         run: |
           #!/bin/bash
+          export
           sudo apt update
           sudo apt install -y pandoc
           mkdir ./output || true
