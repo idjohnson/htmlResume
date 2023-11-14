@@ -39,14 +39,16 @@ jobs:
           name: resumePDF
           path: output/resume.pdf
       - name: Check out my other private repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
         with:
           repository: idjohnson/idjohnson
           token: ${{ secrets.my_pat }}
-      - name: Create dir
+          path: 'idjohnson'
+      - name: debug
         run: |
           set -x
           export
           ls -ltra
           pwd
           ls -ltra ..
+          ls -ltra $GITHUB_WORKSPACE
