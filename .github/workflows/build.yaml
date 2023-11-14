@@ -37,3 +37,14 @@ jobs:
         with:
           name: resumePDF
           path: output/resume.pdf
+      - name: Check out my other private repo
+        uses: actions/checkout@master
+        with:
+          repository: idjohnson/idjohnson
+          token: ${{ secrets.my_pat }}
+      - name: Create dir
+        run: |
+          export
+          ls -ltra
+          pwd
+          ls -ltra ..
