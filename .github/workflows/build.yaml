@@ -47,8 +47,10 @@ jobs:
       - name: debug
         run: |
           set -x
-          export
-          ls -ltra
-          pwd
-          ls -ltra ..
-          ls -ltra $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE/idjohnson
+          cp ../resume.docx ./
+          cp ../output/resume.pdf ./
+          git add resume.docx
+          git add resume.pdf
+          git commit -m 'add resume'
+          git push
