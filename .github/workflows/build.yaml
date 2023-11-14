@@ -44,15 +44,17 @@ jobs:
           repository: idjohnson/idjohnson
           token: ${{ secrets.my_pat }}
           path: 'idjohnson'
-      - name: debug
+      - name: UploadResume
         run: |
           set -x
           cd $GITHUB_WORKSPACE/idjohnson
           git config --global user.email "isaac.johnson@example.com"
           git config --global user.name "Isaac Johnson"
           cp ../resume.docx ./
+          cp ../resume.html ./
           cp ../output/resume.pdf ./
           git add resume.docx
           git add resume.pdf
+          git add resume.html
           git commit -m 'add resume'
           git push
