@@ -45,6 +45,7 @@ jobs:
           token: ${{ secrets.my_pat }}
       - name: Create dir
         run: |
+          set -x
           export
           ls -ltra
           pwd
