@@ -1,5 +1,5 @@
 {
     "title": "The Clouds and Kubernetes",
     "enabled": "true",
-    "description": "I have many guides on my freshbrewed.science blog covering how to install and manage k8s on AWS, GCE, Azure, Digital Ocean, Vultr and Linode. I've presented on GitOps and CICD at conferences such as Open Source North. I'm fairly savvy on the differences between the mainstream cloud providers and how to implement robust Kubernetes solutions."
+    "description": "I have written guides on my freshbrewed.science blog covering how to install and manage k8s on AWS, GCP, Azure, Digital Ocean, Akamai and more. I've presented on GitOps and CICD at conferences such as Open Source North. I've created courses on WhizLaps around Azure DevOps and AKS.  I'm well versed on the differences between mainstream cloud providers and implementing robust Kubernetes solutions."
 }
